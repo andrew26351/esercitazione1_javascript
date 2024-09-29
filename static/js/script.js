@@ -28,8 +28,8 @@
 */
 
 let firstName
-let risposteCorrette = 0
 let risposteErrate = 0
+let totDomande = 7
 
 do{
     firstName = prompt("Inserisci il tuo nome")
@@ -38,7 +38,6 @@ do{
 
 let d1 = prompt("Qual è la capitale dell'italia")
 if(d1.toLowerCase().trim() === "roma"){
-    risposteCorrette += 1
     console.log("Risposta corretta")
 
 }else{
@@ -49,7 +48,6 @@ if(d1.toLowerCase().trim() === "roma"){
 
 let d2 = prompt("Il ladro del fumetto italiano")
 if(d2.toLowerCase().trim() === "diabolik"){
-    risposteCorrette += 1
     console.log("Risposta corretta")
 
 
@@ -61,7 +59,6 @@ if(d2.toLowerCase().trim() === "diabolik"){
 
 let d3 = prompt("Il fiore che si gira verso il sole")
 if(d3.toLowerCase().trim() === "girasole"){
-    risposteCorrette += 1
     console.log("Risposta corretta")
 
 }else{
@@ -70,20 +67,18 @@ if(d3.toLowerCase().trim() === "girasole"){
 }
 
 
-let d4 = prompt("Di ce colore è la fragola?")
-if(d4.toLowerCase().trim() === "rosso"){
-    risposteCorrette += 1
+let d4 = prompt("Di che colore è la fragola?")
+if(d4.toLowerCase().trim() === "rossa"){
     console.log("Risposta corretta")
 
 }else{
     risposteErrate += 1
-    console.log("La risposta correta era rosso ")
+    console.log("La risposta correta era rossa ")
 }
 
 
 let d5 = prompt("Il fiume di Firenze")
 if(d5.toLowerCase().trim() === "arno"){
-    risposteCorrette += 1
     console.log("Risposta corretta")
 
 }else{
@@ -92,29 +87,26 @@ if(d5.toLowerCase().trim() === "arno"){
 }
 
 
-let d6 = prompt("")
-if(d6.toLowerCase().trim() === "roma"){
-    risposteCorrette += 1
+let d6 = prompt("Qual è l'isola più grande del mondo?")
+if(d6.toLowerCase().trim() === "groenlandia"){
     console.log("Risposta corretta")
 
 }else{
     risposteErrate += 1
-    console.log("La risposta correta era ")
+    console.log("La risposta correta era groenlandia")
 }
 
 
-let d7 = prompt("Qual è la capitale ditalia")
-if(d7.toLowerCase().trim() === "roma"){
-    risposteCorrette += 1
+let d7 = prompt("Con 12 colori diversi, la bandiera di quale paese è la più colorata al mondo?")
+if(d7.toLowerCase().trim() === "belize"){
     console.log("Risposta corretta")
 
 }else{
     risposteErrate += 1
-    console.log("La risposta correta era ")
+    console.log("La risposta correta era belize")
 }
 
 
-console.log("Il tuo punteggio è", risposteCorrette)
-
-
+let percentuale = (risposteErrate / totDomande)*100
+console.log("Percentuale riposte sbagliate:", percentuale.toFixed(2) + "%")
 
