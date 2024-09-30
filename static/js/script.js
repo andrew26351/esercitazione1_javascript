@@ -31,13 +31,28 @@ let firstName
 let risposteErrate = 0
 let totDomande = 7
 
+
+function sanitize(input){
+
+    input = input.toLowerCase().trim()
+    return input
+}
+
+function calcPerc(n1, n2){
+
+    percentuale = (n1 / n2)*100
+    return percentuale
+}
+
+
+
 do{
     firstName = prompt("Inserisci il tuo nome")
 }while(firstName === null)
 
 
 let d1 = prompt("Qual è la capitale dell'italia")
-if(d1.toLowerCase().trim() === "roma"){
+if(sanitize(d1) === "roma"){
     console.log("Risposta corretta")
 
 }else{
@@ -47,7 +62,7 @@ if(d1.toLowerCase().trim() === "roma"){
 
 
 let d2 = prompt("Il ladro del fumetto italiano")
-if(d2.toLowerCase().trim() === "diabolik"){
+if(sanitize(d2) === "diabolik"){
     console.log("Risposta corretta")
 
 
@@ -58,7 +73,7 @@ if(d2.toLowerCase().trim() === "diabolik"){
 
 
 let d3 = prompt("Il fiore che si gira verso il sole")
-if(d3.toLowerCase().trim() === "girasole"){
+if(sanitize(d3) === "girasole"){
     console.log("Risposta corretta")
 
 }else{
@@ -68,7 +83,7 @@ if(d3.toLowerCase().trim() === "girasole"){
 
 
 let d4 = prompt("Di che colore è la fragola?")
-if(d4.toLowerCase().trim() === "rossa"){
+if(sanitize(d4) === "rossa"){
     console.log("Risposta corretta")
 
 }else{
@@ -78,7 +93,7 @@ if(d4.toLowerCase().trim() === "rossa"){
 
 
 let d5 = prompt("Il fiume di Firenze")
-if(d5.toLowerCase().trim() === "arno"){
+if(sanitize(d5) === "arno"){
     console.log("Risposta corretta")
 
 }else{
@@ -88,7 +103,7 @@ if(d5.toLowerCase().trim() === "arno"){
 
 
 let d6 = prompt("Qual è l'isola più grande del mondo?")
-if(d6.toLowerCase().trim() === "groenlandia"){
+if(sanitize(d6) === "groenlandia"){
     console.log("Risposta corretta")
 
 }else{
@@ -98,7 +113,7 @@ if(d6.toLowerCase().trim() === "groenlandia"){
 
 
 let d7 = prompt("Con 12 colori diversi, la bandiera di quale paese è la più colorata al mondo?")
-if(d7.toLowerCase().trim() === "belize"){
+if(sanitize(d7) === "belize"){
     console.log("Risposta corretta")
 
 }else{
@@ -107,6 +122,7 @@ if(d7.toLowerCase().trim() === "belize"){
 }
 
 
-let percentuale = (risposteErrate / totDomande)*100
+
+calcPerc(risposteErrate, totDomande)
 console.log("Percentuale riposte sbagliate:", percentuale.toFixed(2) + "%")
 
